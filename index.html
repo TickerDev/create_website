@@ -195,6 +195,90 @@
             margin-bottom: 1rem;
         }
 
+        .skills-section {
+            margin-top: 2rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            border-top: 1px solid #cfcfcf;
+            background: #f5f5f5;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            min-height: 90px;
+            padding: 1.35rem 1.2rem;
+            border-right: 1px solid #cfcfcf;
+            border-bottom: 1px solid #cfcfcf;
+            font-size: clamp(1.1rem, 1.2vw, 2rem);
+            font-weight: 500;
+            color: #1e1e1e;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .skills-grid .skill-item:nth-child(5n) {
+            border-right: none;
+        }
+
+        .skill-icon {
+            width: 1.6rem;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color: #111827;
+            font-size: 1.5rem;
+        }
+
+        .skill-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.7rem;
+            height: 1.7rem;
+            border-radius: 0.35rem;
+            background: #111827;
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+        }
+
+        .skill-badge.next-badge {
+            border-radius: 50%;
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+
+        .skill-badge.triangle-badge {
+            border-radius: 0.2rem;
+            font-size: 0.9rem;
+            background: #111827;
+        }
+
+        .skill-badge.stripe-badge {
+            background: #111827;
+            border-radius: 0.25rem;
+            font-weight: 800;
+        }
+
+        @media (max-width: 1024px) {
+            .skills-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .skills-grid .skill-item:nth-child(5n) {
+                border-right: 1px solid #cfcfcf;
+            }
+
+            .skills-grid .skill-item:nth-child(3n) {
+                border-right: none;
+            }
+        }
+
         @media (max-width: 768px) {
             .profile-section {
                 grid-template-columns: 1fr;
@@ -271,6 +355,34 @@
                 <div class="content-block">
                     <p>I’ve explored generative AI through DXR Labs and led a designer and web developer at Rylo Group on gaming-related web platforms. These projects have given me experience in programming, product development, and team leadership. I’m interested in connecting with people building useful AI tools, business software, and gaming products.</p>
                 </div>
+                <section class="skills-section">
+                    <h2>Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item"><span class="skill-badge">TS</span>TypeScript</div>
+                        <div class="skill-item"><span class="skill-icon"><i class="fa-brands fa-node-js"></i></span>Node</div>
+                        <div class="skill-item"><span class="skill-icon"><i class="fa-brands fa-react"></i></span>React</div>
+                        <div class="skill-item"><span class="skill-badge next-badge">N</span>Next.js</div>
+                        <div class="skill-item"><span class="skill-icon"><i class="fa-solid fa-wind"></i></span>Tailwind CSS</div>
+
+                        <div class="skill-item"><span class="skill-icon"><i class="fa-solid fa-cloud"></i></span>Cloudflare</div>
+                        <div class="skill-item"><span class="skill-icon"><i class="fa-brands fa-aws"></i></span>AWS</div>
+                        <div class="skill-item"><span class="skill-badge triangle-badge">▲</span>Vercel</div>
+                        <div class="skill-item"><span class="skill-icon"><i class="fa-brands fa-docker"></i></span>Docker</div>
+                        <div class="skill-item"><span class="skill-icon"><i class="fa-brands fa-linux"></i></span>Linux</div>
+
+                        <div class="skill-item"><span class="skill-icon"><i class="fa-solid fa-database"></i></span>Postgres</div>
+                        <div class="skill-item"><span class="skill-badge">S</span>Supabase</div>
+                        <div class="skill-item"><span class="skill-icon"><i class="fa-solid fa-leaf"></i></span>MongoDB</div>
+                        <div class="skill-item"><span class="skill-badge">R</span>Redis</div>
+                        <div class="skill-item"><span class="skill-badge stripe-badge">S</span>Stripe</div>
+
+                        <div class="skill-item"><span class="skill-badge">P</span>Paddle</div>
+                        <div class="skill-item"><span class="skill-badge">L</span>Lua</div>
+                        <div class="skill-item"><span class="skill-icon"><i class="fa-brands fa-python"></i></span>Python</div>
+                        <div class="skill-item"><span class="skill-icon"><i class="fa-brands fa-java"></i></span>Java</div>
+                        <div class="skill-item"><span class="skill-icon"><i class="fa-brands fa-git-alt"></i></span>Git</div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
